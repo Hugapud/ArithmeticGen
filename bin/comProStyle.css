@@ -1,0 +1,68 @@
+ 
+ #lbl2{
+	-fx-font-size:19px;
+	-fx-font-family:"Times New Roman";
+	-fx-text-fill:rgb(255,255,255);
+	-fx-effect:dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#lbl1{
+	-fx-font-size:25px;
+	-fx-font-weight:Bold;
+	-fx-text-fill:rgb(255,255,255);
+	-fx-effect:dropshadow( gaussian , rgb(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#vbox{
+	-fx-background-color:linear-gradient(to bottom,rgb(125,125,125),rgb(58,58,58));
+	
+
+}
+
+#hbox{
+	
+	-fx-border-color:linear-gradient(to bottom,rgb(241,241,241),rgb(219,227,238));
+	-fx-border-width: 2.5px;
+	
+}
+
+#lbl3{
+	-fx-text-fill:rgb(255,146,36);
+	-fx-font-weight:Bold;
+	-fx-font-size:20px;
+}
+.label{
+	
+	-fx-text-fill:rgb(255,146,36);
+	-fx-font-weight:Bold;
+	-fx-font-size:19px;
+	
+}
+
+#backBtn{
+	-fx-font-size:18px;
+	
+	-fx-background-color:linear-gradient(to top,rgb(255,228,202),rgb(255,146,36));
+	
+	}
+#backBtn:hover{
+	-fx-background-color:linear-gradient(to bottom,rgb(255,228,202),rgb(255,146,36));    
+	
+}
+#frontBtn{
+	-fx-font-size:18px;
+	-fx-background-color:linear-gradient(to top,rgb(255,228,202),rgb(255,146,36));
+}
+#frontBtn:hover{
+	-fx-background-color:linear-gradient(to bottom,rgb(255,228,202),rgb(255,146,36));    
+	
+}
+
+#lbl4{
+	-fx-text-fill:rgb(255,146,36);
+	-fx-font-weight:Bold;
+	-fx-font-size:23px;
+}
+#text{
+	-fx-text-fill:rgb(208,32,6);
+}

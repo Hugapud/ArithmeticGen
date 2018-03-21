@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderpane" prefHeight="600.0" prefWidth="600.0" stylesheets="@initialComputeStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculateController">
+   <center>
+      <VBox fx:id="vbox1">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <GridPane hgap="3.0" prefHeight="115.0" prefWidth="527.0" vgap="4.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="135.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="162.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="265.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="题量选择：">
+                           <GridPane.margin>
+                              <Insets left="30.0" top="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="数值范围：" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="30.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ComboBox fx:id="combox2" prefHeight="32.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin></ComboBox>
+                        <ComboBox fx:id="combox1" minHeight="-Infinity" prefHeight="32.0" prefWidth="150.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets top="20.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </GridPane>
+                  <Label fx:id="lbl5" minHeight="-Infinity" minWidth="-Infinity" prefHeight="64.0" prefWidth="64.0">
+                     <HBox.margin>
+                        <Insets right="70.0" top="10.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="208.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <Label text="参数选择：" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane fx:id="gridpane" prefHeight="200.0" vgap="13.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="150.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="210.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="94.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="44.0" minHeight="9.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="24.0" minHeight="8.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="149.0" text="运算参与符号选择：" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="7.0" />
+                           </GridPane.margin></Label>
+                        <Label prefHeight="24.0" prefWidth="146.0" text="运算参与个数选择：">
+                           <GridPane.margin>
+                              <Insets left="7.0" top="12.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="confirmBtn" mnemonicParsing="false" onAction="#affirmBtnAction" prefHeight="25.0" prefWidth="86.0" text="确认" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="5.0" top="40.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <HBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <CheckBox fx:id="checkBox1" mnemonicParsing="false" text="+" />
+                              <CheckBox fx:id="checkBox2" mnemonicParsing="false" text="-" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="checkBox3" mnemonicParsing="false" text="*" />
+                              <CheckBox fx:id="checkBox4" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="/" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <ComboBox fx:id="combox3" minHeight="-Infinity" prefHeight="30.0" prefWidth="150.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="70.0" right="70.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <Label text="已选择选项：">
+               <VBox.margin>
+                  <Insets left="50.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="textArea" prefHeight="139.0" prefWidth="460.0">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" top="15.0" />
+               </VBox.margin>
+            </TextArea>
+            <Button fx:id="generateBtn" mnemonicParsing="false" onAction="#showProScene" text="题目生成">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="255.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox fx:id="vbox" prefHeight="63.0" prefWidth="600.0" spacing="3.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl1" text="四则运算生成器">
+               <VBox.margin>
+                  <Insets left="10.0" top="7.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lbl2" prefHeight="21.0" prefWidth="232.0" text="Four arithmetic generators">
+               <VBox.margin>
+                  <Insets bottom="3.0" left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
